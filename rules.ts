@@ -131,6 +131,9 @@ const rules: KarabinerRules[] = [
         //   `,
         // },
 
+        //###############################################################################
+        // Windows "w" Layer
+        //###############################################################################
         // w = "Window" via rectangle.app
         w: {
             h: rectangleWithAerospace("first-fourth"),
