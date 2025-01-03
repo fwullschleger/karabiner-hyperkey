@@ -195,14 +195,30 @@ export function shell(
  * Shortcut for managing window sizing with Rectangle
  */
 export function rectangle(name: string): LayerCommand {
-  return {
-    to: [
-      {
-        shell_command: `open -g rectangle://execute-action?name=${name}`,
-      },
-    ],
-    description: `Window: ${name}`,
-  };
+    return {
+        to: [
+            {
+                shell_command: `open -g rectangle://execute-action?name=${name}`,
+            },
+        ],
+        description: `Window: ${name}`,
+    };
+}
+
+// Put windows in floating mode first before rectangle alignment
+export function rectangleWithAerospace(name: string): LayerCommand {
+    return {
+        to: [
+            {
+                "key_code": "x",
+                "modifiers": ["control", "option"]
+            },
+            {
+                shell_command: `open -g rectangle://execute-action?name=${name}`,
+            },
+        ],
+        description: `Window: ${name}`,
+    };
 }
 
 /**

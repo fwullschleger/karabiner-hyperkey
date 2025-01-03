@@ -1,7 +1,11 @@
-# Karabiner Hyper Key configuration
+> [!IMPORTANT]
+> I forked this repo from [Max Stoiber](https://mxstbr.com/).
+> I modified it to my specific needs:
+> - **Modified:** almost all keyboard shortcuts (see [rules.ts](rules.ts))
+> - **Added:** utils function `rectangleWithAerospace` which puts windows in floating mode first before rectangle alignment (see [utils.ts](utils.ts))
+> - **Added:** vim key movements without sublayer
 
-> [!NOTE]
-> You can find my implementation in the branch [fw](https://github.com/fwullschleger/karabiner-hyperkey/tree/fw)
+# Karabiner Hyper Key Configuration
 
 If you like TypeScript and want your Karabiner configuration maintainable & type-safe, you probably want to use the custom configuration DSL / generator I created in `rules.ts` and `utils.ts`!
 
