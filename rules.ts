@@ -56,8 +56,9 @@ const rules: KarabinerRules[] = [
         ],
     },
     ...createHyperSubLayers({
+        
         h: {
-            description: "Hyper Key + h: vim movement left", 
+            description: "Hyper Key + h: vim movement left",
             to: [{key_code: "left_arrow"}],
         },
         j: {
@@ -72,64 +73,40 @@ const rules: KarabinerRules[] = [
             description: "Hyper Key + l: vim movement right",
             to: [{key_code: "right_arrow"}],
         },
-        // spacebar: open(
-        //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-        // ),
-        // b = "B"rowse
-        // b: {
-        //   t: open("https://twitter.com"),
-        //   // Quarterly "P"lan
-        //   p: open("https://mxstbr.com/cal"),
-        //   y: open("https://news.ycombinator.com"),
-        //   f: open("https://facebook.com"),
-        //   r: open("https://reddit.com"),
-        //   h: open("https://hashnode.com/draft"),
-        // },
-        // o = "Open" applications
-        // o: {
-        //   1: app("1Password"),
-        //   g: app("Google Chrome"),
-        //   c: app("Notion Calendar"),
-        //   v: app("Zed"),
-        //   d: app("Discord"),
-        //   s: app("Slack"),
-        //   e: app("Superhuman"),
-        //   n: app("Notion"),
-        //   t: app("Terminal"),
-        //   // Open todo list managed via *H*ypersonic
-        //   h: open(
-        //     "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-        //   ),
-        //   z: app("zoom.us"),
-        //   // "M"arkdown (Reflect.app)
-        //   m: app("Reflect"),
-        //   r: app("Reflect"),
-        //   f: app("Finder"),
-        //   // "i"Message
-        //   i: app("Texts"),
-        //   p: app("Spotify"),
-        //   a: app("iA Presenter"),
-        //   // "W"hatsApp has been replaced by Texts
-        //   w: open("Texts"),
-        //   l: open(
-        //     "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-        //   ),
-        // },
 
-        // TODO: This doesn't quite work yet.
-        // l = "Layouts" via Raycast's custom window management
-        // l: {
-        //   // Coding layout
-        //   c: shell`
-        //     open -a "Visual Studio Code.app"
-        //     sleep 0.2
-        //     open -g "raycast://customWindowManagementCommand?position=topLeft&relativeWidth=0.5"
-
-        //     open -a "Terminal.app"
-        //     sleep 0.2
-        //     open -g "raycast://customWindowManagementCommand?position=topRight&relativeWidth=0.5"
-        //   `,
-        // },
+        //###############################################################################
+        // Move "v" Layer
+        //###############################################################################
+        // v = "moVe" which isn't "m" because we want it to be on the left hand
+        // so that hjkl work like they do in vim
+        v: {
+            h: {
+                to: [{key_code: "left_arrow"}],
+            },
+            j: {
+                to: [{key_code: "down_arrow"}],
+            },
+            k: {
+                to: [{key_code: "up_arrow"}],
+            },
+            l: {
+                to: [{key_code: "right_arrow"}],
+            },
+            // Magicmove via homerow.app
+            m: {
+                to: [{key_code: "spacebar", modifiers: ["shift", "command"]}],
+            },
+            // Scroll mode via homerow.app
+            s: {
+                to: [{key_code: "j", modifiers: ["shift", "command"]}],
+            },
+            u: {
+                to: [{key_code: "page_up"}],
+            },
+            i: {
+                to: [{key_code: "page_down"}],
+            },
+        },
 
         //###############################################################################
         // Windows "w" Layer
@@ -157,6 +134,66 @@ const rules: KarabinerRules[] = [
                     },
                 ],
             },
+
+            // spacebar: open(
+            //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
+            // ),
+            // b = "B"rowse
+            // b: {
+            //   t: open("https://twitter.com"),
+            //   // Quarterly "P"lan
+            //   p: open("https://mxstbr.com/cal"),
+            //   y: open("https://news.ycombinator.com"),
+            //   f: open("https://facebook.com"),
+            //   r: open("https://reddit.com"),
+            //   h: open("https://hashnode.com/draft"),
+            // },
+            // o = "Open" applications
+            // o: {
+            //   1: app("1Password"),
+            //   g: app("Google Chrome"),
+            //   c: app("Notion Calendar"),
+            //   v: app("Zed"),
+            //   d: app("Discord"),
+            //   s: app("Slack"),
+            //   e: app("Superhuman"),
+            //   n: app("Notion"),
+            //   t: app("Terminal"),
+            //   // Open todo list managed via *H*ypersonic
+            //   h: open(
+            //     "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
+            //   ),
+            //   z: app("zoom.us"),
+            //   // "M"arkdown (Reflect.app)
+            //   m: app("Reflect"),
+            //   r: app("Reflect"),
+            //   f: app("Finder"),
+            //   // "i"Message
+            //   i: app("Texts"),
+            //   p: app("Spotify"),
+            //   a: app("iA Presenter"),
+            //   // "W"hatsApp has been replaced by Texts
+            //   w: open("Texts"),
+            //   l: open(
+            //     "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
+            //   ),
+            // },
+
+            // TODO: This doesn't quite work yet.
+            // l = "Layouts" via Raycast's custom window management
+            // l: {
+            //   // Coding layout
+            //   c: shell`
+            //     open -a "Visual Studio Code.app"
+            //     sleep 0.2
+            //     open -g "raycast://customWindowManagementCommand?position=topLeft&relativeWidth=0.5"
+
+            //     open -a "Terminal.app"
+            //     sleep 0.2
+            //     open -g "raycast://customWindowManagementCommand?position=topRight&relativeWidth=0.5"
+            //   `,
+            // },
+
             // semicolon: {
             //     description: "Window: Hide",
             //     to: [
@@ -293,39 +330,6 @@ const rules: KarabinerRules[] = [
         //   },
         // },
 
-        //###############################################################################
-        // Move "v" Layer
-        //###############################################################################
-        // v = "moVe" which isn't "m" because we want it to be on the left hand
-        // so that hjkl work like they do in vim
-        v: {
-            h: {
-                to: [{key_code: "left_arrow"}],
-            },
-            j: {
-                to: [{key_code: "down_arrow"}],
-            },
-            k: {
-                to: [{key_code: "up_arrow"}],
-            },
-            l: {
-                to: [{key_code: "right_arrow"}],
-            },
-            // Magicmove via homerow.app
-            m: {
-                to: [{key_code: "spacebar", modifiers: ["shift", "command"]}],
-            },
-            // Scroll mode via homerow.app
-            s: {
-                to: [{key_code: "j", modifiers: ["shift", "command"]}],
-            },
-            u: {
-                to: [{key_code: "page_up"}],
-            },
-            i: {
-                to: [{key_code: "page_down"}],
-            },
-        },
 
         // c = Musi*c* which isn't "m" because we want it to be on the left hand
         // c: {
