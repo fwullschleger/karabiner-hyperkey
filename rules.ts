@@ -113,10 +113,11 @@ const rules: KarabinerRules[] = [
         //###############################################################################
         // w = "Window" via rectangle.app
         w: {
-            h: rectangleWithAerospace("first-fourth"),
-            c: rectangleWithAerospace("center-half"),
-            l: rectangleWithAerospace("last-fourth"),
-            f: {
+          h: rectangleWithAerospace("first-fourth"),
+          c: rectangleWithAerospace("center-half"),
+          l: rectangleWithAerospace("last-fourth"),
+          x: rectangleWithAerospace("specified"), // custom centering command with specific height and width (@see: .osx in dotfiles on how to define a custom centering command)
+          f: {
                 description: "Window: toggle AeroSpace window floating / tiling mode",
                 to: [
                     {
