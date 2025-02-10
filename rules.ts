@@ -75,6 +75,19 @@ const rules: KarabinerRules[] = [
         },
 
         //###############################################################################
+        // service "s" Layer
+        //###############################################################################
+        // the service layer is for random/various commands where it does not make sense to dedicate a whole layer to it. 
+        s: {
+          c: {
+            to: [
+              {key_code: "l", modifiers: ["command"]},
+              {key_code: "c", modifiers: ["command"]}
+            ],
+          },
+        },
+
+        //###############################################################################
         // Move "v" Layer
         //###############################################################################
         // v = "moVe" which isn't "m" because we want it to be on the left hand
