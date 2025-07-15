@@ -148,6 +148,50 @@ const rules: KarabinerRules[] = [
                     },
                 ],
             },
+        },
+      
+        //###############################################################################
+        // IDE "i" Layer
+        //###############################################################################
+        i: {
+          n: {
+            description: "Rider: Manage Recent Solutions... (n -> new)",
+            to: [
+              {
+                "key_code": "n",
+                "modifiers": ["control", "option", "shift", "command"]
+              },
+            ],
+          },
+          w: {
+            description: "Rider: Close Project (W for MacOS global hide, Hyper + Q is somehow blocked by the system)",
+            to: [
+              {
+                "key_code": "w",
+                "modifiers": ["control", "option", "shift", "command"]
+              },
+            ],
+          },
+          o: {
+            description: "Rider: Open in External Terminal -> Open current file location in the external terminal",
+            to: [
+              {
+                "key_code": "o",
+                "modifiers": ["control", "option", "shift", "command"]
+              },
+            ],
+          },
+          p: {
+            description: "Rider: External Terminal -> Open the project directory in the external terminal",
+            to: [
+              {
+                "key_code": "p",
+                "modifiers": ["control", "option", "shift", "command"]
+              },
+            ],
+          },
+        },
+      
 
             // spacebar: open(
             //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
@@ -269,7 +313,6 @@ const rules: KarabinerRules[] = [
             //         },
             //     ],
             // },
-        },
 
         // s = "System"
         // s: {

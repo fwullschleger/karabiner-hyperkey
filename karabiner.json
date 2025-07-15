@@ -104,6 +104,11 @@
                     "type": "variable_if",
                     "name": "hyper_sublayer_w",
                     "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
+                    "value": 0
                   }
                 ]
               }
@@ -167,6 +172,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_w",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
                     "value": 0
                   }
                 ]
@@ -232,6 +242,11 @@
                     "type": "variable_if",
                     "name": "hyper_sublayer_w",
                     "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
+                    "value": 0
                   }
                 ]
               }
@@ -295,6 +310,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_w",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
                     "value": 0
                   }
                 ]
@@ -360,6 +380,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_w",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
                     "value": 0
                   },
                   {
@@ -462,6 +487,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_w",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
                     "value": 0
                   },
                   {
@@ -728,6 +758,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_i",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper",
                     "value": 1
                   }
@@ -910,6 +945,201 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_w",
+                    "value": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key sublayer \"i\"",
+            "manipulators": [
+              {
+                "description": "Toggle Hyper sublayer i",
+                "type": "basic",
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to_after_key_up": [
+                  {
+                    "set_variable": {
+                      "name": "hyper_sublayer_i",
+                      "value": 0
+                    }
+                  }
+                ],
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "hyper_sublayer_i",
+                      "value": 1
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_h",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_j",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_k",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_l",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_s",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_v",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_w",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Rider: Manage Recent Solutions... (n -> new)",
+                "to": [
+                  {
+                    "key_code": "n",
+                    "modifiers": [
+                      "control",
+                      "option",
+                      "shift",
+                      "command"
+                    ]
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "n",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Rider: Close Project (W for MacOS global hide, Hyper + Q is somehow blocked by the system)",
+                "to": [
+                  {
+                    "key_code": "w",
+                    "modifiers": [
+                      "control",
+                      "option",
+                      "shift",
+                      "command"
+                    ]
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "w",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Rider: Open in External Terminal -> Open current file location in the external terminal",
+                "to": [
+                  {
+                    "key_code": "o",
+                    "modifiers": [
+                      "control",
+                      "option",
+                      "shift",
+                      "command"
+                    ]
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "o",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "description": "Rider: External Terminal -> Open the project directory in the external terminal",
+                "to": [
+                  {
+                    "key_code": "p",
+                    "modifiers": [
+                      "control",
+                      "option",
+                      "shift",
+                      "command"
+                    ]
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "p",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_i",
                     "value": 1
                   }
                 ]
