@@ -93,31 +93,48 @@ const rules: KarabinerRules[] = [
         // v = "moVe" which isn't "m" because we want it to be on the left hand
         // so that hjkl work like they do in vim
         v: {
-            h: {
-                to: [{key_code: "left_arrow"}],
-            },
+            // Mouse cursor movement (as requested)
             j: {
-                to: [{key_code: "down_arrow"}],
+                description: "Movement: Mouse left",
+                to: [{ mouse_key: { x: -4072 } }],
             },
             k: {
-                to: [{key_code: "up_arrow"}],
+                description: "Movement: Mouse down",
+                to: [{ mouse_key: { y: 4072 } }],
             },
             l: {
-                to: [{key_code: "right_arrow"}],
+                description: "Movement: Mouse right",
+                to: [{ mouse_key: { x: 4072 } }],
             },
-            // Magicmove via homerow.app
+            i: {
+                description: "Movement: Mouse up",
+                to: [{ mouse_key: { y: -4072 } }],
+            },
+            // Mouse clicks (preserved from your changes)
+            u: {
+                description: "Movement: Left click",
+                to: [{ pointing_button: "button1" }],
+            },
+            o: {
+                description: "Movement: Right click",
+                to: [{ pointing_button: "button2" }],
+            },
+            // Mouse wheel (vertical)
             m: {
+                description: "Movement: Scroll up",
+                to: [{ mouse_key: { vertical_wheel: -32 } }],
+            },
+            n: {
+                description: "Movement: Scroll down",
+                to: [{ mouse_key: { vertical_wheel: 32 } }],
+            },
+            // Magicmove via homerow.app (kept on h as in your change)
+            h: {
                 to: [{key_code: "spacebar", modifiers: ["shift", "command"]}],
             },
             // Scroll mode via homerow.app
             s: {
                 to: [{key_code: "j", modifiers: ["shift", "command"]}],
-            },
-            u: {
-                to: [{key_code: "page_up"}],
-            },
-            i: {
-                to: [{key_code: "page_down"}],
             },
         },
 
