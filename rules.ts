@@ -129,13 +129,13 @@ const rules: KarabinerRules[] = [
                 to: [{ mouse_key: { vertical_wheel: 32 } }],
             },
             // Magicmove via homerow.app (kept on h as in your change)
-            h: {
-                to: [{key_code: "spacebar", modifiers: ["shift", "command"]}],
-            },
-            // Scroll mode via homerow.app
-            s: {
-                to: [{key_code: "j", modifiers: ["shift", "command"]}],
-            },
+            // h: {
+            //     to: [{key_code: "spacebar", modifiers: ["shift", "command"]}],
+            // },
+            // // Scroll mode via homerow.app
+            // s: {
+            //     to: [{key_code: "j", modifiers: ["shift", "command"]}],
+            // },
         },
 
         //###############################################################################
@@ -143,10 +143,10 @@ const rules: KarabinerRules[] = [
         //###############################################################################
         // w = "Window" via rectangle.app
         w: {
-          h: rectangleWithAerospace("first-fourth"),
-          c: rectangleWithAerospace("center-half"),
-          l: rectangleWithAerospace("last-fourth"),
-          x: rectangleWithAerospace("specified"), // custom centering command with specific height and width (@see: .osx in dotfiles on how to define a custom centering command)
+          // h: rectangleWithAerospace("first-fourth"),
+          // c: rectangleWithAerospace("center-half"),
+          // l: rectangleWithAerospace("last-fourth"),
+          // x: rectangleWithAerospace("specified"), // custom centering command with specific height and width (@see: .osx in dotfiles on how to define a custom centering command)
           f: {
                 description: "Window: toggle AeroSpace window floating / tiling mode",
                 to: [
