@@ -75,6 +75,33 @@ const rules: KarabinerRules[] = [
         },
 
         //###############################################################################
+        // Audio Switching (direct keys for fast access)
+        // These hotkeys trigger the corresponding functions in your Hammerspoon setup.
+        // Make sure your Hammerspoon `audio-switcher.lua` file is configured correctly:
+        // - The `audio-switcher.lua` should be in your `~/.hammerspoon/` directory.
+        // - The `init.lua` should contain `require('audio-switcher')`.
+        // - The `favoriteDevices` table in `audio-switcher.lua` defines which device
+        //   name corresponds to which number key (e.g., '8', '9', '0').
+        //   Example: { key = '0', name = 'MacBook Pro Speakers' }
+        //###############################################################################
+        7: {
+          description: "Audio: Open device chooser",
+          to: [{ key_code: "7", modifiers: ["control", "option", "shift", "command"] }],
+        },
+        8: {
+          description: "Audio: Switch to Device 1",
+          to: [{ key_code: "8", modifiers: ["control", "option", "shift", "command"] }],
+        },
+        9: {
+          description: "Audio: Switch to Device 2",
+          to: [{ key_code: "9", modifiers: ["control", "option", "shift", "command"] }],
+        },
+        0: {
+          description: "Audio: Switch to Device 3",
+          to: [{ key_code: "0", modifiers: ["control", "option", "shift", "command"] }],
+        },
+
+        //###############################################################################
         // service "s" Layer
         //###############################################################################
         // the service layer is for random/various commands where it does not make sense to dedicate a whole layer to it. 
