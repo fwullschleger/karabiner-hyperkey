@@ -75,34 +75,75 @@ const rules: KarabinerRules[] = [
         },
 
         //###############################################################################
-        // Audio Switching (direct keys for fast access)
-        // These hotkeys trigger the corresponding functions in your Hammerspoon setup.
-        // Make sure your Hammerspoon `audio-switcher.lua` file is configured correctly:
-        // - The `audio-switcher.lua` should be in your `~/.hammerspoon/` directory.
-        // - The `init.lua` should contain `require('audio-switcher')`.
-        // - The `favoriteDevices` table in `audio-switcher.lua` defines which device
-        //   name corresponds to which number key (e.g., '8', '9', '0').
-        //   Example: { key = '0', name = 'MacBook Pro Speakers' }
+        // Audio "q" Layer
         //###############################################################################
-        7: {
-          description: "Audio: Open device chooser",
-          to: [{ key_code: "7", modifiers: ["control", "option", "shift", "command"] }],
-        },
-        8: {
-          description: "Audio: Switch to Device 1",
-          to: [{ key_code: "8", modifiers: ["control", "option", "shift", "command"] }],
-        },
-        9: {
-          description: "Audio: Switch to Device 2",
-          to: [{ key_code: "9", modifiers: ["control", "option", "shift", "command"] }],
-        },
-        0: {
-          description: "Audio: Switch to Device 3",
-          to: [{ key_code: "0", modifiers: ["control", "option", "shift", "command"] }],
+        // This layer contains all audio and media controls:
+        // - Media controls (native consumer keys): play/pause, previous, next, mute
+        // - Output devices (via Hammerspoon): device chooser, MacBook speakers, AirPods, Jabra
+        // - Input devices (via Hammerspoon): mic chooser, MacBook mic, AirPods mic, Jabra mic, mute toggle
+        //###############################################################################
+        q: {
+          // Media Controls (native consumer keys)
+          s: {
+            description: "Media: Play/Pause",
+            to: [{ key_code: "play_or_pause" }],
+          },
+          comma: {
+            description: "Media: Previous Track",
+            to: [{ key_code: "rewind" }],
+          },
+          period: {
+            description: "Media: Next Track",
+            to: [{ key_code: "fastforward" }],
+          },
+          m: {
+            description: "Media: Mute Audio",
+            to: [{ key_code: "mute" }],
+          },
+
+          // Output Devices (Hammerspoon)
+          7: {
+            description: "Audio Output: Device Chooser",
+            to: [{ key_code: "7", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          0: {
+            description: "Audio Output: MacBook Pro Speakers",
+            to: [{ key_code: "8", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          8: {
+            description: "Audio Output: AirPods Pro",
+            to: [{ key_code: "9", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          9: {
+            description: "Audio Output: Jabra Evolve 65",
+            to: [{ key_code: "0", modifiers: ["control", "option", "shift", "command"] }],
+          },
+
+          // Input Devices (Hammerspoon)
+          z: {
+            description: "Audio Input: Microphone Chooser",
+            to: [{ key_code: "z", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          o: {
+            description: "Audio Input: MacBook Pro Microphone",
+            to: [{ key_code: "u", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          u: {
+            description: "Audio Input: AirPods Pro",
+            to: [{ key_code: "i", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          i: {
+            description: "Audio Input: Jabra Evolve 65",
+            to: [{ key_code: "o", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          d: {
+            description: "Audio Input: Mute/Unmute Microphone",
+            to: [{ key_code: "d", modifiers: ["control", "option", "shift", "command"] }],
+          },
         },
 
         //###############################################################################
-        // service "s" Layer
+        // Service "s" Layer
         //###############################################################################
         // the service layer is for random/various commands where it does not make sense to dedicate a whole layer to it. 
         s: {
