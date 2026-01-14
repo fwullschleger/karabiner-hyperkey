@@ -2,7 +2,7 @@
 # merge-karabiner.sh
 
 # Configuration - adjust these paths as needed
-DOTFILES_CONFIG="${DOTFILES_CONFIG:-$HOME/workspaces/dotfiles/.config/karabiner/karabiner.json}"
+DOTFILES_CONFIG="${DOTFILES_CONFIG:-../dotfiles/.config/karabiner/karabiner.json}"
 GENERATED_CONFIG="${GENERATED_CONFIG:-./karabiner.json}"
 
 # Validate files exist

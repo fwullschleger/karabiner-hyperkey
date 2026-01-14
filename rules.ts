@@ -101,6 +101,64 @@ const rules: KarabinerRules[] = [
             to: [{ key_code: "mute" }],
           },
 
+          // Input Devices (Hammerspoon)
+          7: {
+            description: "Audio Input: Microphone Chooser",
+            to: [{ key_code: "z", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          0: {
+            description: "Audio Input: MacBook Pro Microphone",
+            to: [{ key_code: "o", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          8: {
+            description: "Audio Input: AirPods Pro",
+            to: [{ key_code: "u", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          9: {
+            description: "Audio Input: Jabra Evolve 65",
+            to: [{ key_code: "i", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          d: {
+            description: "Audio Input: Mute/Unmute Microphone",
+            to: [{ key_code: "d", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          n: {
+            description: "Volume: Increase",
+            to: [{ key_code: "volume_increment" }],
+          },
+          b: {
+            description: "Volume: Decrease",
+            to: [{ key_code: "volume_decrement" }],
+          },
+          right_arrow: {
+            description: "Media: Next Track",
+            to: [{ key_code: "fastforward" }],
+          },
+          left_arrow: {
+            description: "Media: Previous Track",
+            to: [{ key_code: "rewind" }],
+          },
+        },
+
+        a: {
+          // Media Controls (native consumer keys)
+          s: {
+            description: "Media: Play/Pause",
+            to: [{ key_code: "play_or_pause" }],
+          },
+          comma: {
+            description: "Media: Previous Track",
+            to: [{ key_code: "rewind" }],
+          },
+          period: {
+            description: "Media: Next Track",
+            to: [{ key_code: "fastforward" }],
+          },
+          m: {
+            description: "Media: Mute Audio",
+            to: [{ key_code: "mute" }],
+          },
+  
           // Output Devices (Hammerspoon)
           7: {
             description: "Audio Output: Device Chooser",
@@ -108,37 +166,35 @@ const rules: KarabinerRules[] = [
           },
           0: {
             description: "Audio Output: MacBook Pro Speakers",
-            to: [{ key_code: "8", modifiers: ["control", "option", "shift", "command"] }],
+            to: [{ key_code: "0", modifiers: ["control", "option", "shift", "command"] }],
           },
           8: {
             description: "Audio Output: AirPods Pro",
-            to: [{ key_code: "9", modifiers: ["control", "option", "shift", "command"] }],
+            to: [{ key_code: "8", modifiers: ["control", "option", "shift", "command"] }],
           },
           9: {
             description: "Audio Output: Jabra Evolve 65",
-            to: [{ key_code: "0", modifiers: ["control", "option", "shift", "command"] }],
-          },
-
-          // Input Devices (Hammerspoon)
-          z: {
-            description: "Audio Input: Microphone Chooser",
-            to: [{ key_code: "z", modifiers: ["control", "option", "shift", "command"] }],
-          },
-          o: {
-            description: "Audio Input: MacBook Pro Microphone",
-            to: [{ key_code: "u", modifiers: ["control", "option", "shift", "command"] }],
-          },
-          u: {
-            description: "Audio Input: AirPods Pro",
-            to: [{ key_code: "i", modifiers: ["control", "option", "shift", "command"] }],
-          },
-          i: {
-            description: "Audio Input: Jabra Evolve 65",
-            to: [{ key_code: "o", modifiers: ["control", "option", "shift", "command"] }],
+            to: [{ key_code: "9", modifiers: ["control", "option", "shift", "command"] }],
           },
           d: {
             description: "Audio Input: Mute/Unmute Microphone",
             to: [{ key_code: "d", modifiers: ["control", "option", "shift", "command"] }],
+          },
+          n: {
+            description: "Volume: Increase",
+            to: [{ key_code: "volume_increment" }],
+          },
+          b: {
+            description: "Volume: Decrease",
+            to: [{ key_code: "volume_decrement" }],
+          },
+          right_arrow: {
+            description: "Media: Next Track",
+            to: [{ key_code: "fastforward" }],
+          },
+          left_arrow: {
+            description: "Media: Previous Track",
+            to: [{ key_code: "rewind" }],
           },
         },
 
