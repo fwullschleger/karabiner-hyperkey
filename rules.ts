@@ -122,11 +122,11 @@ const rules: KarabinerRules[] = [
             description: "Audio Input: Mute/Unmute Microphone",
             to: [{ key_code: "d", modifiers: ["control", "option", "shift", "command"] }],
           },
-          n: {
+          h: {
             description: "Volume: Increase",
             to: [{ key_code: "volume_increment" }],
           },
-          b: {
+          n: {
             description: "Volume: Decrease",
             to: [{ key_code: "volume_decrement" }],
           },
@@ -180,11 +180,11 @@ const rules: KarabinerRules[] = [
             description: "Audio Input: Mute/Unmute Microphone",
             to: [{ key_code: "d", modifiers: ["control", "option", "shift", "command"] }],
           },
-          n: {
+          h: {
             description: "Volume: Increase",
             to: [{ key_code: "volume_increment" }],
           },
-          b: {
+          n: {
             description: "Volume: Decrease",
             to: [{ key_code: "volume_decrement" }],
           },
