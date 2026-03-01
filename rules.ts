@@ -145,6 +145,12 @@ const rules: KarabinerRules[] = [
             description: "Media: Previous Track",
             to: [{ key_code: "rewind" }],
           },
+          
+          // MacWhisper
+          r: {
+            description: "Open MacWhisper Global (recording starts automatically)",
+            to: [{ key_code: "r", modifiers: ["control", "option", "shift", "command"] }],
+          },
         },
 
         a: {
@@ -202,6 +208,12 @@ const rules: KarabinerRules[] = [
           left_arrow: {
             description: "Media: Previous Track",
             to: [{ key_code: "rewind" }],
+          },
+          
+          // MacWhisper
+          r: {
+            description: "Open MacWhisper Global (recording starts automatically)",
+            to: [{ key_code: "r", modifiers: ["control", "option", "shift", "command"] }],
           },
         },
 
